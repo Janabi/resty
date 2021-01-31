@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Description 
+Just started with react library. This app will render the url text and the CRUD method on a div container once you click on 'GO'
+
+## UML
+![UML lab1](./react-basic.png)
+
 ## Available Scripts
 
 In the project directory, you can run:

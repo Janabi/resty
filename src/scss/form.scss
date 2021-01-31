@@ -1,0 +1,25 @@
+main {
+    height: 75vh;
+    text-align: center;
+    .url-form {
+        margin: 10px 0;
+    }
+    .radiobutton {
+        margin: 20px 0;
+        input[type=radio] {
+            margin-left: 10px;
+        }
+    }
+    .result-container {
+        margin: 10px 15%;
+        width: 70%;
+        height: 45vh;
+        background-color: rgb(221, 221, 221);
+        border: 1px solid #b1b1b1;
+        border-radius: 10px;
+        p {
+            text-align: left;
+            margin: 4px;
+        }
+    }
+}
