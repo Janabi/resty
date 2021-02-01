@@ -3,10 +3,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Description 
-Just started with react library. This app will render the url text and the CRUD method on a div container once you click on 'GO'
+Just started with react library. This app will render the url text and the CRUD method on a div container once you click on 'GO' and fetching the results array of objects and counts the length of array as well.
 
 ## UML
 ![UML lab1](./react-basic.png)
+![UML lab2](./props-and-state.png)
 
 ## Available Scripts
 

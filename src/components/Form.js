@@ -51,7 +51,7 @@ class Form extends React.Component {
                         <p>URL: <input type="url" onChange={this.handleChange}/> <input type="submit" value="Go" onClick={this.handleClick}/></p>
                     </div>
                     <div className="radiobutton">
-                        <input type="radio" name="crud" id="get" value="GET" onClick={this.change}/><label>GET</label>
+                        <input type="radio" name="crud" id="get" value="GET" onClick={this.change} checked/><label>GET</label>
                         <input type="radio" name="crud" id="post" value="POST" onClick={this.change}/><label>POST</label>
                         <input type="radio" name="crud" id="put" value="PUT" onClick={this.change}/><label>PUT</label>
                         <input type="radio" name="crud" id="delete" value="DELETE" onClick={this.change}/><label>DELETE</label>
