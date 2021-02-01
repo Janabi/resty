@@ -18,15 +18,24 @@ class Form extends React.Component {
         this.setState({getUrl})
     }
 
-    handleClick = () => {
+    handleClick = async (e) => {
+        e.preventDefault();
         let url = this.state.getUrl;
         let method = this.state.getMethod;
+        let raw = await fetch(url);
+        let data = await raw.json();
+        console.log("Data>>>", data)
         document.querySelector('input[type=url]').value = '';
         document.getElementById('get').checked = false;
         document.getElementById('post').checked = false;
         document.getElementById('put').checked = false;
         document.getElementById('delete').checked = false;
-        this.setState({url, method})
+        // this.setState({url, method})
+        if (method === 'GET') {
+            this.props.handler(data.count ,data.results)
+        } else {
+            this.props.handler("", "Its not a get method you've selected")
+        }
     }
 
     change = (e) =>{
@@ -42,14 +51,12 @@ class Form extends React.Component {
                         <p>URL: <input type="url" onChange={this.handleChange}/> <input type="submit" value="Go" onClick={this.handleClick}/></p>
                     </div>
                     <div className="radiobutton">
-                        <input type="radio" name="crud" id="get" value="GET" onClick={this.change}/><label>GET</label>
+                        <input type="radio" name="crud" id="get" value="GET" onClick={this.change} checked/><label>GET</label>
                         <input type="radio" name="crud" id="post" value="POST" onClick={this.change}/><label>POST</label>
                         <input type="radio" name="crud" id="put" value="PUT" onClick={this.change}/><label>PUT</label>
                         <input type="radio" name="crud" id="delete" value="DELETE" onClick={this.change}/><label>DELETE</label>
                     </div>
-                    <div className="result-container">
-                        <p>{this.state.method} {this.state.url}</p>
-                    </div>
+                    
                 </main>
             </>
         );

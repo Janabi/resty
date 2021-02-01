@@ -1,0 +1,13 @@
+.result-container {
+    margin: 0 15%;
+    width: 70%;
+    height: 60vh;
+    background-color: rgb(221, 221, 221);
+    border: 1px solid #b1b1b1;
+    border-radius: 10px;
+    overflow-y: scroll;
+    pre {
+        text-align: left;
+        margin: 4px;
+    }
+}
