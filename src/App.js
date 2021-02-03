@@ -1,10 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
 import Header from './components/Header';
 import Form from './components/Form';
 import Footer from './components/Footer';
 import Results from "./components/Results";
+import History from "./components/History";
 
 
 class App extends React.Component {
